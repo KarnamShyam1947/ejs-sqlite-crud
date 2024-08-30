@@ -1,0 +1,26 @@
+@base_url = http://localhost:3000
+
+GET {{ base_url }}/api/v1/products HTTP/1.1
+
+GET {{ base_url }}/api/v1/products/1 HTTP/1.1
+
+POST {{ base_url }}/api/v1/products HTTP/1.1
+content-type: application/json
+
+{
+  "name" : "Product02",
+  "description" : "testing this .http file",
+  "price" : 143.8
+}
+
+PUT {{ base_url }}/api/v1/products/6 HTTP/1.1
+content-type: application/json
+
+{
+  "name" : "Product02 updated",
+  "description" : "testing this .http file. sending put request",
+  "price" : 143.8
+}
+
+DELETE {{ base_url }}/api/v1/products/6 HTTP/1.1
+
